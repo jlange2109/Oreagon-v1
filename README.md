@@ -1,4 +1,4 @@
-# LangTalk - Node.js Server
+# Web version
 This is the official source for our closed source web project.
 
 ## How to build it?
@@ -10,8 +10,7 @@ You are only allowed to use it for internal or testing purposes.
 Please also make sure that no one else has access to your site.
 
 ## What languages are used?
-Node.js (server-side), MySQL (database) and some Frameworks.
+Node.js (server-side), MySQL (database) and some own frameworks.
 
 ## I can't start it.
-Then you are dumb and maybe not allowed to use or even have the source..
-# Tapzie-v1
+Then you probably don't have any permissions to view or use this code.
