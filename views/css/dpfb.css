@@ -1,0 +1,50 @@
+/*
+ * LangTalk Style File.
+ *
+ * (c) Copyright 2017-present, LangTalk.
+ * This software is not intended for the public.
+ *
+ * ------------------------------------------------------------
+ * | This software may not be used, modified or distributed   |
+ * | for private or public use. An installation or use of     |
+ * | this software is only permitted on DirectProfile servers.|
+ * ------------------------------------------------------------
+ *
+ * Created on: December 3, 2016, 10:07 AM.
+ * Please keep in mind, that you're not allowed to use parts of this
+ * code in private use.
+ */
+
+
+
+ @media screen and (max-device-width: 480px){
+   #bg_div { 
+      background: url(https://wallpaperscraft.com/image/los_angeles_usa_skyscrapers_night_top_view_118099_480x800.jpg) no-repeat;
+   }
+ }
+
+
+@media screen and (max-width: 1920px){
+     #bg_div { 
+      background: url(https://wallpaperscraft.com/image/los_angeles_usa_skyscrapers_night_top_view_118099_1920x1080.jpg) no-repeat;
+   }
+}
+
+@media screen and (max-width: 1600px){
+     #bg_div { 
+      background: url(https://wallpaperscraft.com/image/los_angeles_usa_skyscrapers_night_top_view_118099_1600x900.jpg) no-repeat;
+   }
+}
+
+@media screen and (min-width: 5080px){
+     #bg_div { 
+      background: url(https://wallpaperscraft.com/image/los_angeles_usa_skyscrapers_night_top_view_118099_5040x3360.jpg) no-repeat;
+   }
+}
+
+@media screen and (min-width: 3840px){
+     #bg_div { 
+      background: url(https://wallpaperscraft.com/image/los_angeles_usa_skyscrapers_night_top_view_118099_3840x2400.jpg) no-repeat;
+   }
+}
+

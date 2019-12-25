@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../pages/head %>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body class="bg-img">
+        <div class="body body-s">
+            <form method="post" class="sky-form">
+                <header>Sign Up</header>
+                <fieldset>   
+                     <div class="ui green message" style="padding:3px;">We only need some of your information, then you're done and can get started.</div><br />                    <section>
+                        <div class="row">
+                            <label class="label col col-4">First Name:</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-user"></i>
+                                    <input type="text" name="fname">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                  
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">Last Name:</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-user"></i>
+                                    <input type="tect" name="lname">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                  
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">Email:</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-user"></i>
+                                    <input type="email" name="email">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">Password:</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-lock"></i>
+                                    <input type="password" name="password">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                  
+                  <section>
+                        <div class="row">
+                            <label class="label col col-4">Repeat password:</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <i class="icon-append icon-lock"></i>
+                                    <input type="password" name="rpassword">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+                <footer>
+                    <input type="submit" name="register" class="button" value="Sign Up">
+                    <a href="/login" class="button button-secondary">I already have an account</a>
+                </footer>
+            </form>
+        </div>
+    </body>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</html>        

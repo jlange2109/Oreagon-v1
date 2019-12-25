@@ -1,0 +1,47 @@
+		<% if (user == 1) { %>
+        <div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">  
+        <div class="ui secondary menu container" style="font-size:16px;">
+          <div class="active item" style="color:white;">Oreagon</div>
+              <a href="/" class="item" style="color:white;"><%= lang["ui_tabbar_home"] %></a>
+              <!--<div class="item">
+                  <div class="ui floating dropdown labeled icon button">
+                      <i class="world icon"></i>
+                      <span class="text">German (DE)</span>
+                      <div class="menu">
+                        <a class="item" href="?lang=en_us&next=/">English (US)</a>
+                        <a class="item" href="?lang=de_de&next=/">German (DE)</a>
+                        <a class="item" href="?lang=zh_cn&next=/">Chinese (ZH / 中国)</a>
+                      </div>  
+                  </div>
+             </div>-->
+          <div class="right menu" style="color:white;">
+                    <a href="/profile" class="item" data-tooltip="Your Profile (<%= profile.Name %>)" data-position="bottom left" style="color:white;font-size:24px;"><i class="far fa-user" aria-hidden="true"></i></a>
+    <a href="/messages" class="item" data-tooltip="Messages (0 new)" data-position="bottom left" style="color:white;font-size:24px;"><i class="fas fa-envelope"></i></a>
+    <a href="/logout" class="item" data-tooltip="Logout" data-position="bottom left" style="color:white;font-size:24px;"><i class="fa fa-sign-out-alt" aria-hidden="true"></i></a>
+      </div>
+        </div>
+    </div>
+    <% } else { %>
+    <div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">	
+        <div class="ui secondary menu container" style="font-size:16px;">
+          <div class="active item" style="color:white;">Oreagon</div>
+        		  <a href="/" class="item" style="color:white;"><%= lang["ui_tabbar_home"] %></a>
+        		  <!--<div class="item">
+        		      <div class="ui floating dropdown labeled icon button">
+                      <i class="world icon"></i>
+                      <span class="text">German (DE)</span>
+                      <div class="menu">
+                        <a class="item" href="?lang=en_us&next=/">English (US)</a>
+                        <a class="item" href="?lang=de_de&next=/">German (DE)</a>
+                        <a class="item" href="?lang=zh_cn&next=/">Chinese (ZH / 中国)</a>
+                      </div>	
+                  </div>
+        	   </div>-->
+        	<div class="right menu" style="color:white;">	
+                <a href="/login" class="item" style="color:white;"><%= lang["ui_tabbar_login"] %></a>
+                <a href="/signup" class="item" style="color:white;"><%= lang["ui_tabbar_signup"] %></a>
+          </div>
+        </div>
+    </div>
+    <% } %>
+

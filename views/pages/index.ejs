@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en" id="dp">
+  <head>
+    <% include ../pages/head %>
+  </head>
+<body>
+		<div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">
+
+<div class="ui secondary menu container" style="font-size:16px;">
+  <div class="active item" style="color:white;">Oreagon</div>
+
+		  <a href="/" class="item" style="color:white;"><%= lang["ui_tabbar_home"] %></a>
+		<div class="item">
+		<div class="ui floating dropdown labeled icon button">
+  <i class="world icon"></i>
+  <span class="text">Change language</span>
+  <div class="menu">
+    <a class="item" href="?lang=en_us&next=/">English (US)</a>
+    <a class="item" href="?lang=de_de&next=/">German (DE)</a>
+    <a class="item" href="?lang=zh_cn&next=/">Chinese (ZH / 中国)</a>
+  </div>
+
+</div>
+
+	</div>
+		<% if (user == 1) { %>
+						  <div class="right menu" style="color:white;">
+                    <a href="/profile" class="item" data-tooltip="Your Profile (<%= profile.Name %>)" data-position="bottom left" style="color:white;font-size:24px;"><i class="far fa-user"></i></a>
+    <a href="/messages" class="item" data-tooltip="Messages (0 new)" data-position="bottom left" style="color:white;font-size:24px;"><i class="far fa-envelope"></i></a>
+    <a href="/logout" class="item" data-tooltip="Logout" data-position="bottom left" style="color:white;font-size:24px;"><i class="fas fa-sign-out-alt"></i></a>
+      </div>
+
+			<% } else {%>
+		  <div class="right menu" style="color:white;">
+
+        <a href="/login" class="item" style="color:white;"><%= lang["ui_tabbar_login"] %></a>
+    <a href="/signup" class="item" style="color:white;"><%= lang["ui_tabbar_signup"] %></a>
+      </div>
+      <% } %>
+</div>
+    <div class="ui grid" style="margin-top:4%;font-size:22px;">
+			<div class="right aligned fourteen wide column">
+				<h2><%= lang["index_headtext"] %></h2>
+				<h4><%= lang["index_subheadtext"] %></h4>
+        <% if(user != 1) { %>
+				<a href="/signup" class="ui green button" aria-disabled="true"><%= lang["index_register_button"] %></a>
+        <% } %>
+			</div>
+    </div>
+		</div>
+    <% if(user != 1) { %>
+	<h2 style="text-align:center;color:black;"><%= lang["features_headtext"] %></h2>
+	<div class="ui two column grid container" style="color:black;">
+  <div class="column" style="">
+    <div class="ui raised segment">
+      <a class="ui red ribbon label"><%= lang["features_community"] %></a>
+      <p><%= lang["features_community_text"] %></p>
+      <a class="ui blue ribbon label"><%= lang["features_native_speakers"] %></a>
+      <p><%= lang["features_native_speakers_text"] %></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <a class="ui orange right ribbon label"><%= lang["features_premium"] %></a>
+      <p><%= lang["features_premium_text"] %></p>
+      <a class="ui teal right ribbon label"><%= lang["features_support"] %></a>
+      <p><%= lang["features_support_text"] %></p>
+    </div>
+  </div>
+          <% } else { %>
+            <div class="cnt_loggedin" style="text-align:center;color:black;margin-top:20px;">
+              <h2>Welcome back, <%= profile.Name %>!</h2>
+              <h3>You are logged in!</h3>
+              <a href="/logout" class="ui orange button">Logout</a>
+            </div>
+          <% } %>
+
+</div>
+    
+    <% include ../pages/footer %>
+    </div>
+</body>
+	<script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+	<script src="http://langtalk-development-1-jlange0102670038.codeanyapp.com/js/framework.js"></script>
+	<script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+  <script>
+  $('.ui.dropdown')
+  .dropdown();</script>
+</html>

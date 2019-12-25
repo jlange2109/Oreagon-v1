@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" id="dp">
+  <head>
+    <% include ../pages/head %>
+  </head>
+<body>
+    <div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">  
+        <div class="ui secondary menu container" style="font-size:16px;">
+          <div class="active item" style="color:white;">Oreagon</div>
+        </div>
+    </div>
+    <center style="margin-top:2%;">
+        <h1><%= lang["offline_headtext"] %> &#x1F625;</h1>
+        <h2><%= lang["offline_subtext"] %><br /> <%= lang["offline_text"] %></h2>
+        <a href="/" style="font-size:18px;" class="ui blue button"><%= lang["ui_offline_reload"] %></a> 
+    </center>
+  
+     <% include ../pages/footer %>
+   
+    </div>
+</body>
+  <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+  <script src="http://langtalk-development-1-jlange0102670038.codeanyapp.com/js/framework.js"></script>
+  <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+  <script>
+  $('.ui.dropdown')
+  .dropdown();</script>
+</html>
+ 

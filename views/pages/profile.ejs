@@ -1,0 +1,142 @@
+
+<html lang="en" id="lt">
+  <head>
+    <% include ../pages/head %>
+  </head>
+<body>
+		    <% include ../pages/navigation %>
+	  <div class="ui grid container five" style="margin-top:2%;max-height:520px;">
+   <div class="ui special cards left floated">
+  <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui inverted dimmer">
+        <div class="content">
+          <div class="center">
+            <div class="ui primary button">Add Friend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <a style="font-size:23px;color:black;font-weight:400px;"><%= profile.Name %></a>
+					<p class="extra">
+            <% if(own_profile == 1) { %>
+						( That's you. )
+            <% } %>
+					</p>
+            <% if(!own_profile == 1) { %>
+						<a href="" class="ui primary button disabled">Followed</a>
+            <% } else if(own_profile == 0 && user == 1) { %>
+                <a href="/!/profile/follow/?pid=<%= profile.AccountID %>" class="ui primary button">Follow</a>
+            <% } %>   
+        <br />     
+				<div class="ui red horizontal label" style="margin-top:3px;"><%= profile.Name %> follows <strong>0</strong> member(s).</div>
+    </div>
+    <div class="content">
+      <h3>SELF-INTRODUCTION</h3>
+      <h4>
+        <%= profile.Description %>
+				<br />
+				<br />
+        <% if(own_profile == 1) { %>
+				 <a id="edit_info" class="ui green button">Edit</a>
+        <% } %> 
+      </h4>
+    </div>
+  </div>
+</div>
+<br />                                                                  
+    <div class="ui large feed right floated">
+         <h2>Moments of <%= profile.Name %> <a href="" style="margin-left:5px;" id="create_new_post" class="ui primary tiny button">Share a moment</a></h2>
+    <% if(own_profile == 1) { %>				 
+		<h2>Post something awesome to reach more people in the world.</h2>
+    <% } else { %>
+		<h2>Follow <%= profile.Name %> today to get quickly updates.</h2>
+    <% } %>
+	</div>
+  </div>
+
+</div>
+   
+    </div>
+</body>
+<div class="ui modal description_edit">
+  <div class="header">
+    Edit your description
+  </div>
+  <div class=" content">
+    <div class="description">
+      <div class="ui header">Here you can change your description for your profile page.</div>
+      <div class="ui form">
+				<div class="field">
+					<form method="post">
+						<label>Description:</label>
+    				<textarea value="Description" id="desc" name="description" rows="2"></textarea>
+  			</div>
+			</div>
+    </div>
+  </div>
+  <div class="actions">
+      <input type="submit" name="change_info" class="ui green button" value="Save that!">
+		</form>
+  </div>
+</div>
+
+<div class="ui modal newpost">
+  <div class="header">
+    Create new post
+  </div>
+  <div class=" content">
+    <div class="description">
+      <div class="ui form">
+				<div class="field">
+					<form method="post" enctype="multipart/form-data">
+    				<textarea placeholder="Write something awesome.." id="desc" name="post_message" rows="2"></textarea>
+  			</div>
+				<div class="fileupload">
+    			<input type="file" name="file"><br />
+				</div>	
+			</div>
+    </div>
+  </div>
+  <div class="actions">
+      <input type="submit" name="post_submit" class="ui green button" value="Publish">
+		</form>
+  </div>
+</div>
+    <% include ../pages/footer %>
+
+        <script src="http://semantic-ui.com/javascript/library/jquery.min.js"></script>
+    <script src="http://langtalk-development-1-jlange0102670038.codeanyapp.com/js/framework.js"></script>
+    <script>
+      $(function(){
+          $('#edit_info').click(function(){
+            $('.description_edit')
+            .modal('show');
+            return false;
+          })
+      });
+      
+      $(function(){
+          $('#show_image').click(function(){
+            $('.pimage')
+            .modal('show');
+            return false;
+          })
+      });
+      
+      $(function() {
+          $('#create_new_post').click(function() {
+            $('.newpost')
+            .modal('show');
+            return false;
+          })
+      });
+      
+      
+    </script>
+    <script>
+  $('.ui.dropdown')
+  .dropdown();</script>
+</html>
+ 

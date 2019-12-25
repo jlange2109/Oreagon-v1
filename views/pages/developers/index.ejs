@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" id="dp">
+  <head>
+    <% include ../../pages/head %>
+  </head>
+<body>
+    <% include ../../pages/developers/navigation %>
+    <div class="content" style="margin-top:2%;">
+        <div class="aboutus_start" style="text-align:center;">
+          <h1 style="font-size:40px;font-family:Arial;">Developers</h1>
+          <h1 style="font-size:25px;margin-top:-10px;font-family: 'Gloria Hallelujah', cursive;">Help us to create unique user experiences.</h1>
+        </div>
+
+        <div class="ui one column stackable center aligned page grid" style="margin-top:20px">
+          <div class="ui huge floating message" style="width:600px;">
+            <div class="column twelve wide">
+              <h2>Get started</h2>
+              <p>You are interested in making applications for <strong>Oreagon</strong>?</p>
+              <p>That's great! We'll show you how to get easily started in developing.</p>
+              <a href="/developers/get-started" class="ui blue button">Get started</a></p>
+              <% if(user == 1) { %>
+              <p>You are logged in as <strong>developer</strong>, <%= profile.Name %>!</p>
+              <a href="/developers/application/create" class="ui green button">Create new application</a>
+              <a href="/developers/applications" class="ui orange button">My applications</a>
+              <% } %>
+            </div>
+          </div>
+          <div class="ui huge floating message" style="width:600px;">
+            <div class="column twelve wide">
+              <h2>Don't miss this!</h2>
+              <a href="/developers/documentation"><h2 style="font-size:22px;">Documentation</h2></a>
+              <p>See what our API's offers to you and how they work.</p>
+              <a href="/developers/resources"><h2 style="font-size:22px;">Resources</h2></a>
+              <p>We offer a lot of code samples, check them out here.</p>
+              <a href="/developers/resources"><h2 style="font-size:22px;">News</h2></a>
+              <p>Stay up to date with us, here you see all the important announcements.</p>
+              <a href="/developers/resources"><h2 style="font-size:22px;">Upload</h2></a>
+              <p>Upload your application directly on our website and make it available for everyone.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+     <% include ../../pages/footer %>
+   
+    </div>
+</body>
+	<script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+	<script src="http://langtalk-development-1-jlange0102670038.codeanyapp.com/js/framework.js"></script>
+	<script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+  <script>
+  $('.ui.dropdown')
+  .dropdown();</script>
+</html>
+ 

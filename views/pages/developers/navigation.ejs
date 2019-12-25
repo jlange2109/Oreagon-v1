@@ -1,0 +1,24 @@
+		<% if (user == 1) { %>
+        <div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">  
+        <div class="ui secondary menu container" style="font-size:16px;">
+          <div class="active item" style="color:white;">Oreagon for developers</div>
+              <a href="/" class="item" style="color:white;">Home</a>
+          <div class="right menu" style="color:white;">
+                    <a href="/developers/account" class="item" data-tooltip="Developer account: <%= profile.Name %>" data-position="bottom left" style="color:white;font-size:24px;"><i class="far fa-user" aria-hidden="true"></i></a>
+    <a href="/applications" class="item" data-tooltip="Your applications" data-position="bottom left" style="color:white;font-size:24px;"><i class="fas fa-th-large"></i></a>
+    <a href="/logout" class="item" data-tooltip="Logout" data-position="bottom left" style="color:white;font-size:24px;"><i class="fa fa-sign-out-alt" aria-hidden="true"></i></a>
+      </div>
+        </div>
+    </div>
+    <% } else { %>
+    <div class="main_bg" id="bg_div" onload="changeDivImage()" style="color:white;">	
+        <div class="ui secondary menu container" style="font-size:16px;">
+          <div class="active item" style="color:white;">Oreagon for developers</div>
+        		  <a href="/" class="item" style="color:white;">Home</a>
+            	<div class="right menu" style="color:white;">	
+                    <a href="/login" class="item" style="color:white;">Log into your developer account</a>
+              </div>
+        </div>
+    </div>
+    <% } %>
+
